@@ -1,0 +1,25 @@
+{
+	"env": {
+		"node": true,
+		"es6": true,
+		"browser": true,
+		"commonjs": true,
+		"mocha": true
+	},
+	"extends": ["airbnb", "prettier"],
+	"plugins": ["prettier"],
+	"rules": {
+		"no-unused-vars": "warn",
+		"no-console": "warn",
+		"import/prefer-default-export": "off",
+		"func-names": "off",
+		"no-underscore-dangle": "off",
+		"prefer-destructuring": "off",
+		"no-await-in-loop": "off",
+		"array-callback-return": "off",
+		"no-return-assign": "off",
+		"no-param-reassign": "off",
+		"dot-notation": "off",
+		"class-methods-use-this": "off"
+	}
+}
