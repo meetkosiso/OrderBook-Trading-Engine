@@ -17,10 +17,10 @@ describe('OrderBook Integration Test', function() {
 		});
 		it('should successfully fulfill next order', function(done) {
 			const orderProcess = new OrderBookProcess();
-			orderProcess.setSellOrder(20, 1001, normaliseObject);
+			orderProcess.setSellOrder(20, 1050, normaliseObject);
 
 			const order = new OrderBook();
-			order.buy(1000, 1300);
+			order.buy(1001, 1300);
 			const orderFound = order.getOrder(1);
 			assert.equal(orderFound.executedQuantity, 30);
 			done();
@@ -44,7 +44,6 @@ describe('OrderBook Integration Test', function() {
 
 			const order = new OrderBook();
 			order.sell(324, 1210);
-
 			const orderFound = orderProcess.sellOrders.filter(
 				item => item.price === 1210
 			)[0];
@@ -56,6 +55,7 @@ describe('OrderBook Integration Test', function() {
 		it('should sync orderBook successfully', function(done) {
 			const orderBookFileName = 'orderBook.json';
 			const order = new OrderBook();
+
 			const orderSync = order.sync(orderBookFileName);
 			assert.isAbove(orderSync.length, 0);
 			done();

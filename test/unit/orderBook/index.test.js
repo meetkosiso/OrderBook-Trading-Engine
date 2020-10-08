@@ -13,14 +13,15 @@ describe('OrderBook', function() {
 			order2.setbuyOrder(15, 1000, normaliseObject);
 
 			const order3 = new OrderBook();
-			order3.setbuyOrder(90, 400, normaliseObject);
+			order3.setbuyOrder(90, 1000, normaliseObject);
 
 			const order4 = new OrderBook();
 			order4.setbuyOrder(50, 2000, normaliseObject);
-
 			const order5 = new OrderBook();
-			order5.setbuyOrder(16, 400, normaliseObject);
+			order5.setbuyOrder(16, 1000, normaliseObject);
 
+			console.log('order.buy7', order5.buyOrders);
+			console.log('order.sell7', order5.sellOrders);
 			assert.equal(order5.buyOrders[0].price, 2000);
 			done();
 		});
@@ -42,6 +43,7 @@ describe('OrderBook', function() {
 
 			const order5 = new OrderBook();
 			order5.setSellOrder(16, 400, normaliseObject);
+
 			assert.equal(order5.sellOrders[0].price, 400);
 			done();
 		});
@@ -80,6 +82,7 @@ describe('OrderBook', function() {
 		it('should sell successfully', function(done) {
 			const order = new OrderBook();
 			order.sell(30, 400);
+
 			assert.equal(order.sellOrders[0].executedQuantity, 30);
 			done();
 		});
