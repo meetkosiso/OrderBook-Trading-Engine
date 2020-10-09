@@ -1,6 +1,6 @@
 # Order Book Coding Challenge
 
-The challenge is to create a price-time priority limit order book data structure
+This is an orderbook, that allows a trader to place a bid and buy at the lowest price possible
 
 ## To install the Dependencies
 
