@@ -44,6 +44,7 @@ describe('OrderBook Integration Test', function() {
 
 			const order = new OrderBook();
 			order.sell(324, 1210);
+
 			const orderFound = orderProcess.sellOrders.filter(
 				item => item.price === 1210
 			)[0];

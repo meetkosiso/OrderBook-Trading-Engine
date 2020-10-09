@@ -1,7 +1,7 @@
 {
-	"name": "namebase-orderbook-coding-challenge",
+	"name": "OrderBook",
 	"version": "1.0.0",
-	"description": "Namebase Orderbook Coding Challenge",
+	"description": "Orderbook",
 	"main": "./lib/index.js",
 	"scripts": {
 		"test": "mocha --recursive --watch --require babel-core/register test -name '*_test.js'",
