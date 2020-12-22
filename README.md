@@ -1,4 +1,4 @@
-# Order Book Engine
+# Order Book Trading Engine
 
 This is an orderbook, that allows a trader to place a bid and buy at the lowest price possible
 
